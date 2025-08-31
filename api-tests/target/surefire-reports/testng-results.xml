@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="18" passed="8" failed="10" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-31T19:34:50 WIB" name="API Test Suite" finished-at="2025-08-31T19:34:57 WIB" duration-ms="7208">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-08-31T19:34:50 WIB" name="API Tests" finished-at="2025-08-31T19:34:57 WIB" duration-ms="7208">
+      <class name="runners.ApiTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="setUpClass" finished-at="2025-08-31T19:34:50 WIB" duration-ms="250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@17503f6b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="setUp" finished-at="2025-08-31T19:34:50 WIB" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:53 WIB" duration-ms="2140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create pet with invalid data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:53 WIB" duration-ms="2140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update pet with invalid ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:57 WIB" duration-ms="6651" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Find pets by status"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:53 WIB" duration-ms="2140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create a new pet successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:53 WIB" duration-ms="2140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Find pets with invalid status"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:54 WIB" duration-ms="3451" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update an existing pet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code: 200, but got: 400 expected [200] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code: 200, but got: 400 expected [200] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+at ✽.the response status code should be 200(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:30)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:55 WIB" duration-ms="4808" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Upload pet image"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[src/test/resources/test-image.jpg (No such file or directory)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: src/test/resources/test-image.jpg (No such file or directory)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at org.apache.http.entity.mime.content.FileBody.writeTo(FileBody.java:116)
+at org.apache.http.entity.mime.AbstractMultipartForm.doWriteTo(AbstractMultipartForm.java:134)
+at org.apache.http.entity.mime.AbstractMultipartForm.writeTo(AbstractMultipartForm.java:157)
+at org.apache.http.entity.mime.MultipartFormEntity.writeTo(MultipartFormEntity.java:113)
+at org.apache.http.HttpEntity$writeTo$4.call(Unknown Source)
+at io.restassured.internal.multipart.RestAssuredMultiPartEntity.writeTo(RestAssuredMultiPartEntity.groovy:110)
+at org.apache.http.entity.HttpEntityWrapper.writeTo(HttpEntityWrapper.java:96)
+at org.apache.http.impl.client.EntityEnclosingRequestWrapper$EntityWrapper.writeTo(EntityEnclosingRequestWrapper.java:110)
+at org.apache.http.impl.entity.EntitySerializer.serialize(EntitySerializer.java:118)
+at org.apache.http.impl.AbstractHttpClientConnection.sendRequestEntity(AbstractHttpClientConnection.java:274)
+at org.apache.http.impl.conn.ManagedClientConnectionImpl.sendRequestEntity(ManagedClientConnectionImpl.java:214)
+at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:238)
+at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+at io.restassured.internal.http.HTTPBuilder$post$17.call(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+at io.restassured.filter.Filter$filter$1.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter$5.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+at io.restassured.filter.Filter$filter$5.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter$1.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.FilterContext$next$0.call(Unknown Source)
+at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+at io.restassured.filter.Filter$filter$1.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+at io.restassured.filter.Filter$filter$1.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.FilterContext$next$0.call(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+at steps.PetSteps.i_send_a_post_request_to_with_the_image(PetSteps.java:128)
+at ✽.I send a POST request to "/pet/1/uploadImage" with the image(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:46)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:53 WIB" duration-ms="2150" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Retrieve non-existent pet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code: 404, but got: 200 expected [404] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code: 404, but got: 200 expected [404] but found [200]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+at ✽.the response status code should be 404(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:73)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:54 WIB" duration-ms="3448" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Retrieve an existing pet by ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code: 200, but got: 400 expected [200] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code: 200, but got: 400 expected [200] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+at ✽.the response status code should be 200(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:53 WIB" duration-ms="2150" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete non-existent pet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Pet Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code: 404, but got: 200 expected [404] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code: 404, but got: 200 expected [404] but found [200]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+at ✽.the response status code should be 404(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:78)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:54 WIB" duration-ms="1367" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Get store inventory"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Store Order Management API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:54 WIB" duration-ms="1308" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Retrieve order by ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Store Order Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.core.runner.AmbiguousStepDefinitionsException">
+            <message>
+              <![CDATA["I send a GET request to "/store/order/1" endpoint" matches more than one step definition:
+  "I send a GET request to {string} endpoint" in steps.PetSteps.i_send_a_get_request_to_endpoint(java.lang.String)
+  "^I send a GET request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_get_request_to_store_order_by_id_endpoint(int)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.core.runner.AmbiguousStepDefinitionsException: "I send a GET request to "/store/order/1" endpoint" matches more than one step definition:
+  "I send a GET request to {string} endpoint" in steps.PetSteps.i_send_a_get_request_to_endpoint(java.lang.String)
+  "^I send a GET request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_get_request_to_store_order_by_id_endpoint(int)
+at io.cucumber.core.runner.CachingGlue.findStepDefinitionMatch(CachingGlue.java:406)
+at io.cucumber.core.runner.CachingGlue.stepDefinitionMatch(CachingGlue.java:374)
+at io.cucumber.core.runner.Runner.matchStepToStepDefinition(Runner.java:183)
+at io.cucumber.core.runner.Runner.createTestStepsForPickleSteps(Runner.java:163)
+at io.cucumber.core.runner.Runner.createTestCaseForPickle(Runner.java:146)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:74)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.core.runner.AmbiguousStepDefinitionsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:54 WIB" duration-ms="1309" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Place a new order successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Store Order Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected status code: 200, but got: 400 expected [200] but found [400]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected status code: 200, but got: 400 expected [200] but found [400]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+at ✽.the response status code should be 200(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/store_orders.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:54 WIB" duration-ms="1569" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Place order with invalid pet ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Store Order Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Response does not contain order details expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Response does not contain order details expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at steps.StoreOrderSteps.the_response_should_contain_order_details(StoreOrderSteps.java:106)
+at ✽.the response should contain order details(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/store_orders.feature:38)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:54 WIB" duration-ms="1338" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Place order with missing required fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Store Order Management API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:53 WIB" duration-ms="12" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Retrieve non-existent order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Store Order Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.core.runner.AmbiguousStepDefinitionsException">
+            <message>
+              <![CDATA["I send a GET request to "/store/order/999999" endpoint" matches more than one step definition:
+  "I send a GET request to {string} endpoint" in steps.PetSteps.i_send_a_get_request_to_endpoint(java.lang.String)
+  "^I send a GET request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_get_request_to_store_order_by_id_endpoint(int)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.core.runner.AmbiguousStepDefinitionsException: "I send a GET request to "/store/order/999999" endpoint" matches more than one step definition:
+  "I send a GET request to {string} endpoint" in steps.PetSteps.i_send_a_get_request_to_endpoint(java.lang.String)
+  "^I send a GET request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_get_request_to_store_order_by_id_endpoint(int)
+at io.cucumber.core.runner.CachingGlue.findStepDefinitionMatch(CachingGlue.java:406)
+at io.cucumber.core.runner.CachingGlue.stepDefinitionMatch(CachingGlue.java:374)
+at io.cucumber.core.runner.Runner.matchStepToStepDefinition(Runner.java:183)
+at io.cucumber.core.runner.Runner.createTestStepsForPickleSteps(Runner.java:163)
+at io.cucumber.core.runner.Runner.createTestCaseForPickle(Runner.java:146)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:74)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.core.runner.AmbiguousStepDefinitionsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:53 WIB" duration-ms="4" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete non-existent order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Store Order Management API"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.core.runner.AmbiguousStepDefinitionsException">
+            <message>
+              <![CDATA["I send a DELETE request to "/store/order/999999" endpoint" matches more than one step definition:
+  "I send a DELETE request to {string} endpoint" in steps.PetSteps.i_send_a_delete_request_to_endpoint(java.lang.String)
+  "^I send a DELETE request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_delete_request_to_store_order_by_id_endpoint(int)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.core.runner.AmbiguousStepDefinitionsException: "I send a DELETE request to "/store/order/999999" endpoint" matches more than one step definition:
+  "I send a DELETE request to {string} endpoint" in steps.PetSteps.i_send_a_delete_request_to_endpoint(java.lang.String)
+  "^I send a DELETE request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_delete_request_to_store_order_by_id_endpoint(int)
+at io.cucumber.core.runner.CachingGlue.findStepDefinitionMatch(CachingGlue.java:406)
+at io.cucumber.core.runner.CachingGlue.stepDefinitionMatch(CachingGlue.java:374)
+at io.cucumber.core.runner.Runner.matchStepToStepDefinition(Runner.java:183)
+at io.cucumber.core.runner.Runner.createTestStepsForPickleSteps(Runner.java:163)
+at io.cucumber.core.runner.Runner.createTestCaseForPickle(Runner.java:146)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:74)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.core.runner.AmbiguousStepDefinitionsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-31T19:34:54 WIB" duration-ms="1284" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Place order with missing required fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Store Order Management API"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:57 WIB" name="tearDown" finished-at="2025-08-31T19:34:57 WIB" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.ApiTestRunner@537f60bf]" started-at="2025-08-31T19:34:57 WIB" name="tearDownClass" finished-at="2025-08-31T19:34:57 WIB" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.ApiTestRunner -->
+    </test> <!-- API Tests -->
+  </suite> <!-- API Test Suite -->
+</testng-results>

@@ -1,0 +1,13 @@
+pages/CartPage.class
+utils/LogManager.class
+steps/ProductSteps.class
+pages/BasePage.class
+pages/ProductsPage.class
+utils/ScreenshotManager.class
+steps/LoginSteps.class
+runners/AndroidUITestRunner.class
+steps/CartSteps.class
+utils/DriverManager.class
+utils/ReportManager.class
+pages/LoginPage.class
+pages/ProductDetailsPage.class

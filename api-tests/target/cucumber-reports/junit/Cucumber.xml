@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.936" tests="18" skipped="0" failures="10" errors="0">
+<testcase classname="Pet Management API" name="Update an existing pet" time="3.361">
+<failure type="java.lang.AssertionError" message="Expected status code: 200, but got: 400 expected [200] but found [400]">
+<![CDATA[java.lang.AssertionError: Expected status code: 200, but got: 400 expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+	at ✽.the response status code should be 200(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:30)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given a pet with ID 1 exists in the store...................................passed
+And I have updated pet payload with name "Updated Buddy" and status "sold"..passed
+When I send a PUT request to "/pet" endpoint................................passed
+Then the response status code should be 200.................................failed
+And the response should contain pet name "Updated Buddy"....................skipped
+And the response should contain status "sold"...............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Retrieve an existing pet by ID" time="3.36">
+<failure type="java.lang.AssertionError" message="Expected status code: 200, but got: 400 expected [200] but found [400]">
+<![CDATA[java.lang.AssertionError: Expected status code: 200, but got: 400 expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+	at ✽.the response status code should be 200(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:21)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given a pet with ID 1 exists in the store...................................passed
+When I send a GET request to "/pet/1" endpoint..............................passed
+Then the response status code should be 200.................................failed
+And the response should contain pet details.................................skipped
+And the response should have valid pet schema...............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Find pets by status" time="6.563">
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given pets exist with status "available"....................................passed
+When I send a GET request to "/pet/findByStatus" with status "available"....passed
+Then the response status code should be 200.................................passed
+And the response should be an array.........................................passed
+And all pets in response should have status "available".....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Update pet with invalid ID" time="2.047">
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given I have a pet payload with invalid ID -1...............................passed
+When I send a PUT request to "/pet" endpoint................................passed
+Then the response status code should be 200.................................passed
+And the response should contain validation error............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Upload pet image" time="4.719">
+<failure type="java.io.FileNotFoundException" message="src/test/resources/test-image.jpg (No such file or directory)">
+<![CDATA[java.io.FileNotFoundException: src/test/resources/test-image.jpg (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.apache.http.entity.mime.content.FileBody.writeTo(FileBody.java:116)
+	at org.apache.http.entity.mime.AbstractMultipartForm.doWriteTo(AbstractMultipartForm.java:134)
+	at org.apache.http.entity.mime.AbstractMultipartForm.writeTo(AbstractMultipartForm.java:157)
+	at org.apache.http.entity.mime.MultipartFormEntity.writeTo(MultipartFormEntity.java:113)
+	at org.apache.http.HttpEntity$writeTo$4.call(Unknown Source)
+	at io.restassured.internal.multipart.RestAssuredMultiPartEntity.writeTo(RestAssuredMultiPartEntity.groovy:110)
+	at org.apache.http.entity.HttpEntityWrapper.writeTo(HttpEntityWrapper.java:96)
+	at org.apache.http.impl.client.EntityEnclosingRequestWrapper$EntityWrapper.writeTo(EntityEnclosingRequestWrapper.java:110)
+	at org.apache.http.impl.entity.EntitySerializer.serialize(EntitySerializer.java:118)
+	at org.apache.http.impl.AbstractHttpClientConnection.sendRequestEntity(AbstractHttpClientConnection.java:274)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.sendRequestEntity(ManagedClientConnectionImpl.java:214)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:238)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+	at io.restassured.internal.http.HTTPBuilder$post$17.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$5.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$5.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$1.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next$0.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$1.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next$0.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at steps.PetSteps.i_send_a_post_request_to_with_the_image(PetSteps.java:128)
+	at ✽.I send a POST request to "/pet/1/uploadImage" with the image(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:46)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given a pet with ID 1 exists in the store...................................passed
+And I have a valid image file...............................................passed
+When I send a POST request to "/pet/1/uploadImage" with the image...........failed
+Then the response status code should be 200.................................skipped
+And the response should contain upload confirmation message.................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Find pets with invalid status" time="2.049">
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+When I send a GET request to "/pet/findByStatus" with status "invalid_status".passed
+Then the response status code should be 200.................................passed
+And the response should contain validation error for status.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Delete non-existent pet" time="2.059">
+<failure type="java.lang.AssertionError" message="Expected status code: 404, but got: 200 expected [404] but found [200]">
+<![CDATA[java.lang.AssertionError: Expected status code: 404, but got: 200 expected [404] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+	at ✽.the response status code should be 404(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:78)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+When I send a DELETE request to "/pet/999999" endpoint......................passed
+Then the response status code should be 404.................................failed
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Retrieve non-existent pet" time="2.059">
+<failure type="java.lang.AssertionError" message="Expected status code: 404, but got: 200 expected [404] but found [200]">
+<![CDATA[java.lang.AssertionError: Expected status code: 404, but got: 200 expected [404] but found [200]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+	at ✽.the response status code should be 404(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/pet_management.feature:73)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+When I send a GET request to "/pet/999999" endpoint.........................passed
+Then the response status code should be 404.................................failed
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Create pet with invalid data" time="2.052">
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given I have an invalid pet payload with missing required fields............passed
+When I send a POST request to "/pet" endpoint...............................passed
+Then the response status code should be 200.................................passed
+And the response should contain validation error............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Pet Management API" name="Create a new pet successfully" time="2.049">
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given I have a valid pet payload with name "Buddy" and status "available"...passed
+When I send a POST request to "/pet" endpoint...............................passed
+Then the response status code should be 200.................................passed
+And the response should contain pet name "Buddy"............................passed
+And the pet should have a valid ID..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Store Order Management API" name="Place order with invalid pet ID" time="1.558">
+<failure type="java.lang.AssertionError" message="Response does not contain order details expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: Response does not contain order details expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at steps.StoreOrderSteps.the_response_should_contain_order_details(StoreOrderSteps.java:106)
+	at ✽.the response should contain order details(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/store_orders.feature:38)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given I have an order payload with invalid pet ID -1........................passed
+When I send a POST request to "/store/order" endpoint.......................passed
+Then the response status code should be 200.................................passed
+And the response should contain order details...............................failed
+]]></system-out>
+</testcase>
+<testcase classname="Store Order Management API" name="Get store inventory" time="1.353">
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+When I send a GET request to "/store/inventory" endpoint....................passed
+Then the response status code should be 200.................................passed
+And the response should be a JSON object....................................passed
+And the response should contain inventory counts............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Store Order Management API" name="Place a new order successfully" time="1.294">
+<failure type="java.lang.AssertionError" message="Expected status code: 200, but got: 400 expected [200] but found [400]">
+<![CDATA[java.lang.AssertionError: Expected status code: 200, but got: 400 expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at steps.CommonSteps.the_response_status_code_should_be(CommonSteps.java:54)
+	at ✽.the response status code should be 200(file:///Users/yudhamaulanaahmad/Documents/yudha/krom/api-tests/src/test/resources/features/store_orders.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given I have a valid order payload for pet ID 1 with quantity 2.............passed
+When I send a POST request to "/store/order" endpoint.......................passed
+Then the response status code should be 200.................................failed
+And the response should contain order details...............................skipped
+And the order should have a valid order ID..................................skipped
+And the order status should be "placed".....................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Store Order Management API" name="Place order with missing required fields" time="1.327">
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given I have an incomplete order payload missing pet ID.....................passed
+When I send a POST request to "/store/order" endpoint.......................passed
+Then the response status code should be 400.................................passed
+And the response should contain validation error about missing fields.......passed
+]]></system-out>
+</testcase>
+<testcase classname="Store Order Management API" name="Retrieve non-existent order" time="0.002">
+<failure type="io.cucumber.core.runner.AmbiguousStepDefinitionsException" message="&quot;I send a GET request to &quot;/store/order/999999&quot; endpoint&quot; matches more than one step definition:
+  &quot;I send a GET request to {string} endpoint&quot; in steps.PetSteps.i_send_a_get_request_to_endpoint(java.lang.String)
+  &quot;^I send a GET request to &quot;/store/order/(\d+)&quot; endpoint$&quot; in steps.StoreOrderSteps.i_send_a_get_request_to_store_order_by_id_endpoint(int)">
+<![CDATA[io.cucumber.core.runner.AmbiguousStepDefinitionsException: "I send a GET request to "/store/order/999999" endpoint" matches more than one step definition:
+  "I send a GET request to {string} endpoint" in steps.PetSteps.i_send_a_get_request_to_endpoint(java.lang.String)
+  "^I send a GET request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_get_request_to_store_order_by_id_endpoint(int)
+	at io.cucumber.core.runner.CachingGlue.findStepDefinitionMatch(CachingGlue.java:406)
+	at io.cucumber.core.runner.CachingGlue.stepDefinitionMatch(CachingGlue.java:374)
+	at io.cucumber.core.runner.Runner.matchStepToStepDefinition(Runner.java:183)
+	at io.cucumber.core.runner.Runner.createTestStepsForPickleSteps(Runner.java:163)
+	at io.cucumber.core.runner.Runner.createTestCaseForPickle(Runner.java:146)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:74)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+When I send a GET request to "/store/order/999999" endpoint.................ambiguous
+Then the response status code should be 404.................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Store Order Management API" name="Retrieve order by ID" time="1.286">
+<failure type="io.cucumber.core.runner.AmbiguousStepDefinitionsException" message="&quot;I send a GET request to &quot;/store/order/1&quot; endpoint&quot; matches more than one step definition:
+  &quot;I send a GET request to {string} endpoint&quot; in steps.PetSteps.i_send_a_get_request_to_endpoint(java.lang.String)
+  &quot;^I send a GET request to &quot;/store/order/(\d+)&quot; endpoint$&quot; in steps.StoreOrderSteps.i_send_a_get_request_to_store_order_by_id_endpoint(int)">
+<![CDATA[io.cucumber.core.runner.AmbiguousStepDefinitionsException: "I send a GET request to "/store/order/1" endpoint" matches more than one step definition:
+  "I send a GET request to {string} endpoint" in steps.PetSteps.i_send_a_get_request_to_endpoint(java.lang.String)
+  "^I send a GET request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_get_request_to_store_order_by_id_endpoint(int)
+	at io.cucumber.core.runner.CachingGlue.findStepDefinitionMatch(CachingGlue.java:406)
+	at io.cucumber.core.runner.CachingGlue.stepDefinitionMatch(CachingGlue.java:374)
+	at io.cucumber.core.runner.Runner.matchStepToStepDefinition(Runner.java:183)
+	at io.cucumber.core.runner.Runner.createTestStepsForPickleSteps(Runner.java:163)
+	at io.cucumber.core.runner.Runner.createTestCaseForPickle(Runner.java:146)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:74)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given an order with ID 1 exists in the store................................passed
+When I send a GET request to "/store/order/1" endpoint......................ambiguous
+Then the response status code should be 200.................................skipped
+And the response should contain order details...............................skipped
+And the response should have valid order schema.............................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Store Order Management API" name="Delete non-existent order" time="0">
+<failure type="io.cucumber.core.runner.AmbiguousStepDefinitionsException" message="&quot;I send a DELETE request to &quot;/store/order/999999&quot; endpoint&quot; matches more than one step definition:
+  &quot;I send a DELETE request to {string} endpoint&quot; in steps.PetSteps.i_send_a_delete_request_to_endpoint(java.lang.String)
+  &quot;^I send a DELETE request to &quot;/store/order/(\d+)&quot; endpoint$&quot; in steps.StoreOrderSteps.i_send_a_delete_request_to_store_order_by_id_endpoint(int)">
+<![CDATA[io.cucumber.core.runner.AmbiguousStepDefinitionsException: "I send a DELETE request to "/store/order/999999" endpoint" matches more than one step definition:
+  "I send a DELETE request to {string} endpoint" in steps.PetSteps.i_send_a_delete_request_to_endpoint(java.lang.String)
+  "^I send a DELETE request to "/store/order/(\d+)" endpoint$" in steps.StoreOrderSteps.i_send_a_delete_request_to_store_order_by_id_endpoint(int)
+	at io.cucumber.core.runner.CachingGlue.findStepDefinitionMatch(CachingGlue.java:406)
+	at io.cucumber.core.runner.CachingGlue.stepDefinitionMatch(CachingGlue.java:374)
+	at io.cucumber.core.runner.Runner.matchStepToStepDefinition(Runner.java:183)
+	at io.cucumber.core.runner.Runner.createTestStepsForPickleSteps(Runner.java:163)
+	at io.cucumber.core.runner.Runner.createTestCaseForPickle(Runner.java:146)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:74)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+When I send a DELETE request to "/store/order/999999" endpoint..............ambiguous
+Then the response status code should be 404.................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Store Order Management API" name="Place order with missing required fields" time="1.281">
+<system-out><![CDATA[
+Given the Petstore API is available at "https://petstore.swagger.io/v2".....passed
+Given I have an incomplete order payload missing pet ID.....................passed
+When I send a POST request to "/store/order" endpoint.......................passed
+Then the response status code should be 400.................................passed
+And the response should contain validation error about missing fields.......passed
+]]></system-out>
+</testcase>
+</testsuite>

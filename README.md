@@ -24,4 +24,17 @@ This framework provides:
 - **Comprehensive Reporting**: HTML reports with screenshots and detailed logs
 - **Cross-platform Support**: Works on Windows, macOS, and Linux
 
-## 📁 Project Structure# krom
+## 📁 Project Structure krom
+
+## How to run
+1. Clone the repository
+2. Install dependencies
+3. Set up Appium server
+4. Configure devices/emulators
+5. Run tests -> `mvn test` 
+|| cd into `api-tests` and `mvn clean test -Dcucumber.filter.tags="@api"` 
+|| cd into `android-ui-tests` and `mvn clean test -Dcucumber.filter.tags="@login"` 
+|| cd into `android-ui-tests` and `mvn clean test -Dcucumber.filter.tags="@cart"` 
+|| cd into `android-ui-tests` and `mvn clean test -Dcucumber.filter.tags="@products"` 
+6. View test results
+7. Analyze test logs
