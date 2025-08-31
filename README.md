@@ -32,9 +32,14 @@ This framework provides:
 3. Set up Appium server
 4. Configure devices/emulators
 5. Run tests -> `mvn test` 
-|| cd into `api-tests` and `mvn clean test -Dcucumber.filter.tags="@api"` 
-|| cd into `android-ui-tests` and `mvn clean test -Dcucumber.filter.tags="@login"` 
+
+|| cd into `api-tests` and `mvn clean test -Dcucumber.filter.tags="@api"`
+
+|| cd into `android-ui-tests` and `mvn clean test -Dcucumber.filter.tags="@login"`
+
 || cd into `android-ui-tests` and `mvn clean test -Dcucumber.filter.tags="@cart"` 
+
 || cd into `android-ui-tests` and `mvn clean test -Dcucumber.filter.tags="@products"` 
+
 6. View test results
 7. Analyze test logs
